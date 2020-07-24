@@ -1,0 +1,30 @@
+div{
+    margin: auto;
+    border-radius: 10px;
+    background-color:lightcoral;
+    align-content: center;
+    padding-left: 300px;
+}
+#note{
+    text-align: center;
+    text-shadow: lightseagreen;
+    font-family:  Georgia;
+    font-style: italic;
+}
+#welcome{
+    text-align: center;
+    text-shadow: rgb(127, 71, 134);
+    font-family:  Georgia;
+}
+.submit  {
+background-color: green;
+font-family: monospace;
+display: block;
+
+}
+.email :-webkit-input-placeholder{
+    color: indigo;
+}
+
+
+ 
