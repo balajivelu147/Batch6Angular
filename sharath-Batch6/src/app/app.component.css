@@ -1,7 +1,8 @@
 div{
     margin: auto;
+    border: 5cm 5cm;
     border-radius: 10px;
-    background-color:lightcoral;
+    background-color:lightgreen;
     align-content: center;
     padding-left: 300px;
 }
@@ -17,13 +18,16 @@ div{
     font-family:  Georgia;
 }
 .submit  {
-background-color: green;
+background-color: rgb(180, 180, 33);
 font-family: monospace;
 display: block;
 
 }
-.email :-webkit-input-placeholder{
-    color: indigo;
+
+.button2 {
+    display:block;
+    font-family: Georgia;
+    background-color: rgb(174, 156, 187);
 }
 
 
