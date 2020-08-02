@@ -43,9 +43,9 @@
                 <input type="checkbox" id="checkbox" required> If information is correct tick the box
                 <br>
                 <br>
-                <button class="submit" onclick="login()"> Submit </button>
+                <button mat-button class="submit" onclick="login()"> Submit </button>
                 <p> </p>
-                <button type="submit" class="button2"> <a
+                <button mat-raised-button type="submit" class="button2"> <a
                         href="https://accounts.google.com/signout/chrome/landing?continue=https://mail.google.com/mail&oc=https://mail.google.com/mail&hl=en">
                         SignIn with google </a>
 
@@ -54,12 +54,16 @@
         </div>
         <br>
         <script type="text/javascript">
-        function login(){
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            console.log("email : " + email);
-            console.log("password :" + password);
-        }
+            function login() {
+                var email = document.getElementById("email").value;
+                if (){
+
+                }
+                var password = document.getElementById("password").value;
+                console.log("email : " + email);
+                console.log("password :" + password);
+            
+            }
         </script>
     </body>
 </div>
