@@ -16,6 +16,9 @@
             <form action="#">
                 <label for="First Name">First Name</label>
                 <input type="text" id="firstname" placeholder="First name">
+                <span id="firstnameValidation"></span>
+                <br>
+                
                 <label for="Last name">Last Name</label>
                 <input type="text" id="lastname" placeholder="Last Name">
                 <br>
@@ -27,11 +30,12 @@
                 <br>
                 <label for="password">Password</label>
                 <br>
-                <input type="password" id="password" placeholder="password *">
+                <input title="password and cpassword should match" type="password" id="password" placeholder="password *">
                 <br>
                 <br>
                 <label for="cpassword">Confirm password</label>
-                <input type="password" id="cpassword" placeholder="confirm password *">
+                <input title="password and cpassword should match" type="password" id="cpassword" placeholder="confirm password *">
+                <span style= "display: none;" id="cpasswordValidation">Passwords not matched</span>
                 <br>
                 <br>
                 <label for="age">Age</label>
@@ -69,23 +73,26 @@
                 var gender = document.getElementById("gender").value;
 
                 if (firstname == "") {
-                    alert(" please enter firstname")
-                    console(" please enter firstname");
+                    document.getElementById("firstnameValidation").innerHTML="please enter firstname";
+                    console.log(" please enter firstname");
+                }else{
+                    document.getElementById("firstnameValidation").innerText ="";
                 }
                 if (email == "") {
-                    alert("please enter email id")
-                    console("please enter email id");
+                    
+                    console.log("please enter email id");
                 }
                 if (password == "") {
-                    alert(" please enter password")
-                    console(" please enter password");
+                    
+                    console.log(" please enter password");
                 }
                 if (password == cpassword) {
-                    console(" passwords matched");
-                    alert("passwords matched")
+                    console.log(" passwords matched");
+                    document.getElementById("cpasswordValidation").style.display="none";
                 }
                 else {
-                    alert("please enter same passwords")
+                   
+                    document.getElementById("cpasswordValidation").style.display="block";
                 }
                 if (firstname == "sharath " && email == "assharath2895@gmail.com" && password == "sharu" && cpassword == "sharu") {
                     console.log("firstname : " + firstname);
