@@ -1,0 +1,3 @@
+data binding --> just binds data between ts and template(html)
+1) one way binding --> interpolation --> {{ }} --> binds data from typescript to html
+2) two way binding --> ngModel --> [(ngModel)] --> communicates in both the way
