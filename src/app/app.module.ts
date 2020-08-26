@@ -12,6 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BalajidemoComponent } from './balajidemo/balajidemo.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BalajidemoComponent } from './balajidemo/balajidemo.component';
     LoginComponent,
     SignupComponent,
     AutocompleteComponent,
-    BalajidemoComponent
+    BalajidemoComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,

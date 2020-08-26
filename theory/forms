@@ -1,0 +1,49 @@
+form -->
+
+reactive forms --> formcontrol ---->
+formcontrol 
+formGroup
+formBuilder -- > 
+formArray --> used for dynamic fields, allows us to push or pop dynamically
+
+template driven forms --> ngModel
+
+
+
+formGroup Model:
+
+FormGroup {validator: null, asyncValidator: null, pristine: true, touched: false, _onCollectionChange: ƒ, …}
+asyncValidator: null
+controls:
+email: FormControl {asyncValidator: null, pristine: true, touched: false, validator: ƒ, _onCollectionChange: ƒ, …}
+password: FormControl {validator: null, asyncValidator: null, pristine: true, touched: false, _onCollectionChange: ƒ, …}
+userName: FormControl {asyncValidator: null, pristine: true, touched: false, validator: ƒ, _onCollectionChange: ƒ, …}
+__proto__: Object
+errors: null
+pristine: true
+status: "VALID"
+statusChanges: EventEmitter
+closed: false
+hasError: false
+isStopped: false
+observers: []
+thrownError: null
+__isAsync: false
+_isScalar: false
+__proto__: Subject
+touched: false
+validator: null
+value:
+email: "balaji@gmail.com"
+password: "122344"
+userName: "balaji"
+__proto__: Object
+valueChanges: EventEmitter
+closed: false
+hasError: false
+isStopped: false
+observers: []
+thrownError: null
+__isAsync: false
+_isScalar: false
+__proto__: Subject

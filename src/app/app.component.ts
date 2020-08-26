@@ -21,7 +21,7 @@ private data: Observable<string>;
   balaji = 'balaji1';
   constructor() {
     // let res = document.getElementById("fddsfdsfsd");
-    this.getData();
+    // this.getData();
     this.title = 'this is my first project';
     this.username = "balaji";
     this.balaji = 'balaji2';
@@ -48,39 +48,39 @@ private data: Observable<string>;
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
-  ngAfterContentChecked() { console.log('ngAfterContentChecked()') }
-  ngAfterViewInit() { console.log('ngAfterViewInit()');
+  ngAfterContentChecked() {   }
+  ngAfterViewInit() { 
 
   this.balaji = 'balaji1';
 }
 
-  ngDoCheck() { console.log('ngDoCheck()') }
-  ngAfterContentInit() { console.log('ngAfterContentInit()') }
+  ngDoCheck() {  }
+  ngAfterContentInit() {  }
 
 
 
-  ngAfterViewChecked() { console.log('ngAfterViewChecked()') }
-  ngOnDestroy() { console.log('ngOnDestroy') }
-  ngOnChanges() { console.log('ngOnChanges()'); 
-  this.balaji = 'balaji1';
+  ngAfterViewChecked() { }
+  ngOnDestroy() {  }
+  ngOnChanges() { }; 
+  // this.balaji = 'balaji1';
 }
   
   // ngOnInit() { console.log('ngOnInit()') }
 //access specifier - public, private, protected
-  public getData(): any {
-return false;
-  }
+//   public getData(): any {
+// return false;
+//   }
 
-  signin() {
-    const loginInfo = `{
- username: ${this.username},
- password: ${this.password}
-    }
- `
-    alert(loginInfo);
-    console.log(loginInfo);
-  }
-}
+//   signin() {
+//     const loginInfo = `{
+//  username: ${this.username},
+//  password: ${this.password}
+//     }
+//  `
+//     alert(loginInfo);
+//     console.log(loginInfo);
+//   }
+// }
 
 // @Component({
 //   selector: 'app-root',
