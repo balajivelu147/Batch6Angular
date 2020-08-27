@@ -1,3 +1,4 @@
+<button (click)="addField()">add field</button>
 <form [formGroup]="loginForm" (ngSubmit)="login()">
 
     <input type="text" formControlName="userName"/><br/>
@@ -5,7 +6,15 @@
     <input type="password" formControlName="confirmPassword"/><br/>
 
     <input type="text"  formControlName="email"/><br/>
+<div formArrayName="comments" >
+    <div *ngFor="let input of f.get('comments')['controls']; let i = index">
+        <input type="text" [formControlName]="i">
+        <button (click)="removeField(i)">remove field</button>
+    </div>
+</div>
 
     <button type="submit">signup</button>
 
 </form>
+
+

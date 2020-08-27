@@ -13,6 +13,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BalajidemoComponent } from './balajidemo/balajidemo.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-form-builder.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     SignupComponent,
     AutocompleteComponent,
     BalajidemoComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    ReactiveFormBuilderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { map, tap } from 'rxjs/operators';
 
 @Component({
@@ -19,23 +19,53 @@ export class ReactiveFormsComponent implements OnInit {
           Validators.maxLength(10),
           Validators.pattern(/^[0-9a-zA-Z]+$/)]),
         password: new FormControl('122344'),
-        confirmPassword: new FormControl('122344', ),
-        email: new FormControl('balaji@gmail.com', [Validators.email])
+        confirmPassword: new FormControl('122344',),
+        email: new FormControl('balaji@gmail.com', [Validators.email]),
+        comments: new FormArray([])
       },
       this.customValidators
     );
+    
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
+this.addField();
 
     this.userNameValueChange();
     this.userNameStatusChange();
   }
 
+  addField() {
+    let arr = this.f.controls['comments'] as FormArray;
+    arr.push(new FormControl('newly added'));
+  }
+
+
+  removeField(i: number) {
+    let arr = this.f.controls['comments'] as FormArray;
+    arr.removeAt(i);
+  }
+
+
+
   customValidators(fGroup: FormGroup) {
     return fGroup.get('password').value === fGroup.get('confirmPassword').value
-      ? null : {'mismatch': true};
+      ? null : { 'mismatch': true };
   }
   get userName() {
     return this.loginForm.get('userName')
   }
+
+  get f() {
+    return this.loginForm;
+  }
+
 
   userNameValueChange() {
     this.userName.valueChanges.pipe(
