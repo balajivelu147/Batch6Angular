@@ -14,6 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BalajidemoComponent } from './balajidemo/balajidemo.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-form-builder.component';
+import { LeftNavComponent } from './left-nav/left-nav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +30,8 @@ import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-f
     AutocompleteComponent,
     BalajidemoComponent,
     ReactiveFormsComponent,
-    ReactiveFormBuilderComponent
+    ReactiveFormBuilderComponent,
+    LeftNavComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +42,11 @@ import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-f
     FormsModule ,
     MatInputModule, 
     MatAutocompleteModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    
+  MatToolbarModule,
     BrowserAnimationsModule
     
   ],
