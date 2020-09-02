@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routes } from '../app-routing.module';
+import { SampleService } from 'src/shared/services/sample.service';
 // import { routes } from './../app.module';
 @Component({
   selector: 'app-left-nav',
@@ -7,13 +8,15 @@ import { routes } from '../app-routing.module';
   styleUrls: ['./left-nav.component.scss']
 })
 export class LeftNavComponent 
-// implements OnInit 
+ implements OnInit 
 {
   routes = routes;
 
-  // constructor() { }
+   constructor(public sampleService: SampleService) { }
 
-  // ngOnInit(): void {
-  // }
+  ngOnInit(): void {
+console.log( this.sampleService.sampleNumbers );
+
+  }
 
 }

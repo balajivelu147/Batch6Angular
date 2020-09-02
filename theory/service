@@ -1,0 +1,9 @@
+services --> mostly used to create http requests, interacting between the components
+ 
+
+ -->  singleton pattern -->  the object creating is only once
+
+
+ --> single responsibility pattern -->
+
+ dependency injection--> 

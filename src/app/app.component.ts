@@ -3,23 +3,26 @@ import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { startWith } from 'rxjs/internal/operators/startWith';
 import { map } from 'rxjs/operators';
+import { SampleService } from 'src/shared/services/sample.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [SampleService]
 })
 export class AppComponent implements OnInit, OnChanges, DoCheck, 
 AfterContentChecked,AfterContentInit, AfterViewChecked,AfterViewInit,
 OnDestroy {
   // implements --> inheritance
 
+
 private data: Observable<string>;
   title: string = 'this is my first project';
   username: string;
   password;
   balaji = 'balaji1';
-  constructor() {
+  constructor(public sampleService: SampleService) {
     // let res = document.getElementById("fddsfdsfsd");
     // this.getData();
     this.title = 'this is my first project';
@@ -38,7 +41,8 @@ private data: Observable<string>;
         startWith(''),
         map(value => this._filter(value))
       );
-    this.balaji = 'balaji2';
+    this.balaji = this.sampleService.sampleData;
+
 
   }
 
@@ -51,17 +55,31 @@ private data: Observable<string>;
   ngAfterContentChecked() {   }
   ngAfterViewInit() { 
 
-  this.balaji = 'balaji1';
+    this.balaji = this.sampleService.sampleData;
 }
 
-  ngDoCheck() {  }
+
+btnClick() {
+  // this.sampleService.sampleAdder(4,5);
+  this.sampleService.Increment += 12;
+  const incrementedValue =   this.sampleService.Increment;
+  this.sampleService.sampleNumbers += this.sampleService.sampleAdder(4,5)+incrementedValue;
+}
+
+  ngDoCheck() {  
+//     this.sampleService.sampleNumbers = this.sampleService.sampleNumbers + 1;
+// console.log( this.sampleService.sampleNumbers );
+
+  }
   ngAfterContentInit() {  }
 
 
 
   ngAfterViewChecked() { }
   ngOnDestroy() {  }
-  ngOnChanges() { }; 
+  ngOnChanges() { 
+    // this.sampleService.sampleNumbers += 1;
+  }; 
   // this.balaji = 'balaji1';
 }
   
