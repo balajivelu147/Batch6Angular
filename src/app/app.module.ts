@@ -27,6 +27,8 @@ import { LoanRepaymentComponent } from './loan/loan-repayment/loan-repayment.com
 import { CarInsuranceComponent } from './Insurance/car-insurance/car-insurance.component';
 import { ClaimInsuranceComponent } from './Insurance/claim-insurance/claim-insurance.component';
 import { InsuranceComponent } from './Insurance/insurance/insurance.component';
+import { LoanModule } from './loan/loan.module';
+import { InsuranceModule } from './Insurance/insurance.module';
 
 
 
@@ -40,13 +42,7 @@ import { InsuranceComponent } from './Insurance/insurance/insurance.component';
     ReactiveFormsComponent,
     ReactiveFormBuilderComponent,
     LeftNavComponent,
-    OverlayComponent,
-    ApplyLoanComponent,
-    ProcessLoanComponent,
-    LoanRepaymentComponent,
-    CarInsuranceComponent,
-    ClaimInsuranceComponent,
-    InsuranceComponent
+    OverlayComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +58,9 @@ import { InsuranceComponent } from './Insurance/insurance/insurance.component';
     MatIconModule,
     
   MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LoanModule,
+    InsuranceModule
     
   ],
   providers: [],
