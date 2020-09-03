@@ -20,6 +20,13 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { SampleService } from 'src/shared/services/sample.service';
+import { OverlayComponent } from './overlay/overlay.component';
+import { ApplyLoanComponent } from './loan/apply-loan/apply-loan.component';
+import { ProcessLoanComponent } from './loan/process-loan/process-loan.component';
+import { LoanRepaymentComponent } from './loan/loan-repayment/loan-repayment.component';
+import { CarInsuranceComponent } from './Insurance/car-insurance/car-insurance.component';
+import { ClaimInsuranceComponent } from './Insurance/claim-insurance/claim-insurance.component';
+import { InsuranceComponent } from './Insurance/insurance/insurance.component';
 
 
 
@@ -32,7 +39,14 @@ import { SampleService } from 'src/shared/services/sample.service';
     BalajidemoComponent,
     ReactiveFormsComponent,
     ReactiveFormBuilderComponent,
-    LeftNavComponent
+    LeftNavComponent,
+    OverlayComponent,
+    ApplyLoanComponent,
+    ProcessLoanComponent,
+    LoanRepaymentComponent,
+    CarInsuranceComponent,
+    ClaimInsuranceComponent,
+    InsuranceComponent
   ],
   imports: [
     BrowserModule,

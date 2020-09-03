@@ -1,0 +1,2 @@
+lazy loading ---> its a design pattern,
+ where we will create unique modules(grouping different components), by that way we can load only the required components

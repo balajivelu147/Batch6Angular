@@ -1,0 +1,21 @@
+div.show-button {
+    position: relative;
+    float:left;
+} 
+div.show-button:hover button {
+    display: block;
+}
+div.show-button button {
+    position:absolute;
+    display:none;
+}
+div.show-button button.update {
+    top:0;
+    left:0;
+}
+span .content-show {
+    opacity: 1;
+}
+ .content-hide {
+    opacity: .1;
+}

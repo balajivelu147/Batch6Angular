@@ -23,6 +23,12 @@ export const routes: Routes = [
   },
   { 
     path:'balajidemo', component: BalajidemoComponent
+  },
+  {
+    path:'insurance', loadChildren: () => import(`./Insurance/insurance-routing.module`).then(m => m.InsuranceRoutingModule)
+  },
+  {
+    path:'loan', loadChildren: () => import(`./loan/loan-routing.module`).then(m => m.LoanRoutingModule)
   }
 ]
 
