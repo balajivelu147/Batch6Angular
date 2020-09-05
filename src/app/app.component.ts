@@ -45,6 +45,11 @@ private data: Observable<string>;
 
 
   }
+outputDisplay;
+  receiveValue($event) {
+    this.outputDisplay = $event;
+    console.log($event);
+  }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();

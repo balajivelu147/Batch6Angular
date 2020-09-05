@@ -1,0 +1,3 @@
+parent to child --> we can use input output decorator
+child to parent --> we can use output decorator with eventEmitter, ViewChild
+siblings --> event emitter, services,, services with behaviour subject

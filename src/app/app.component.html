@@ -1,4 +1,5 @@
-<app-left-nav></app-left-nav>
+<!-- {{outputDisplay}} -->
+<app-left-nav (outputValue)="receiveValue($event)"></app-left-nav>
 <!-- 
 <app-left-nav></app-left-nav>
 <span>{{sampleService.sampleNumbers}}</span>
