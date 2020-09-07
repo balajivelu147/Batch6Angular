@@ -1,0 +1,5 @@
+--- used to handle asynchronous data
+--- it has to have a subcriber to make it active
+--- it will become inactive once the subscription completes
+-- it can handle stream of data
+-- if we have have 3 subscribers, it will try to observe input 3 times

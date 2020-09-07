@@ -1,9 +1,10 @@
-import { Component, OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, OnDestroy, AfterViewChecked, AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, OnDestroy, AfterViewChecked, AfterViewInit, Input, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { startWith } from 'rxjs/internal/operators/startWith';
 import { map } from 'rxjs/operators';
 import { SampleService } from 'src/shared/services/sample.service';
+import { LeftNavComponent } from './left-nav/left-nav.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,9 @@ private data: Observable<string>;
   username: string;
   password;
   balaji = 'balaji1';
+
+  @ViewChild(LeftNavComponent) child;
+  
   constructor(public sampleService: SampleService) {
     // let res = document.getElementById("fddsfdsfsd");
     // this.getData();
@@ -59,7 +63,7 @@ outputDisplay;
 
   ngAfterContentChecked() {   }
   ngAfterViewInit() { 
-
+console.log(this.child.viewChildResult);
     this.balaji = this.sampleService.sampleData;
 }
 

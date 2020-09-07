@@ -14,6 +14,8 @@ export class LeftNavComponent implements OnInit
   @Output() outputValue = new EventEmitter<string>();
   routes = routes;
 
+  viewChildResult: string = 'dummy child values';
+
    constructor(public sampleService: SampleService) { }
 
   ngOnInit(): void {
