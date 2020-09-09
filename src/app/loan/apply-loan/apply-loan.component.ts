@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { LeftNavComponent } from 'src/app/left-nav/left-nav.component';
+import { HttpService } from 'src/shared/services/http.service';
 
 @Component({
   selector: 'app-apply-loan',
@@ -8,9 +9,11 @@ import { LeftNavComponent } from 'src/app/left-nav/left-nav.component';
 })
 export class ApplyLoanComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
   // @ViewChild(LeftNavComponent) child;
   ngOnInit(): void {
+
+    this.httpService.getYahoo().subscribe();
   }
 
   ngAfterViewInit() {

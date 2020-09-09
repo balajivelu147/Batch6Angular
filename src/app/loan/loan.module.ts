@@ -3,6 +3,7 @@ import { ProcessLoanComponent } from './process-loan/process-loan.component';
 import { LoanRepaymentComponent } from './loan-repayment/loan-repayment.component';
 import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { LoanRoutingModule } from './loan-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -14,7 +15,8 @@ import { LoanRoutingModule } from './loan-routing.module';
  ApplyLoanComponent
   ],
   imports: [
-    LoanRoutingModule
+    LoanRoutingModule,
+    HttpClientModule
   ],
   providers: []
 })

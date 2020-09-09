@@ -7,3 +7,14 @@ services --> mostly used to create http requests, interacting between the compon
  --> single responsibility pattern -->
 
  dependency injection--> 
+
+
+ http methods: 
+
+ GET - it will just make request ot fetch data, info is passed through  query string
+POST - used to save/post some data in db ---------------------
+PUT -- it is used to update value in db
+HEAD --- 
+DELETE -- deletes a record in db
+PATCH -- used to patch files
+OPTIONS -- 
