@@ -1,0 +1,17 @@
+subject --> its a special type of observable, where we maintain states of data
+A Subject is a special type of Observable which shares a single execution path among observers.
+You can think of this as a single speaker talking at a microphone in a room full of people.
+ Their message (the subject) is being delivered to many (multicast) people (the observers) at once. This is the basis of multicasting.
+ Typical observables would be comparable to a 1 on 1 conversation.
+
+subject - cold, if a single subscription happens it will become active, 
+behaviourSubject - hot, it will be always active, 
+AsyncSubject - 
+ReplaySubject - new ReplaySubject(10) -->
+
+hot observable
+cold observable --
+
+
+complete() --> used to complete obserption
+subscribe() --> it is used to fetch data
