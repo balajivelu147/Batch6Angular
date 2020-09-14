@@ -4,7 +4,7 @@ You can think of this as a single speaker talking at a microphone in a room full
  Their message (the subject) is being delivered to many (multicast) people (the observers) at once. This is the basis of multicasting.
  Typical observables would be comparable to a 1 on 1 conversation.
 
-subject - cold, if a single subscription happens it will become active, 
+subject - cold, if a value assigned and  if a single subscription happens it will become active, 
 behaviourSubject - hot, it will be always active, 
 AsyncSubject - 
 ReplaySubject - new ReplaySubject(10) -->

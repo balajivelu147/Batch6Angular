@@ -8,4 +8,10 @@
 <p>using only without async - {{ sampleService.sampleObservable$}}</p>
 
 
+<p>subject read: {{sampleService.sampleSubject$ | async}}</p>
+<p>BehaviourSubject read: {{sampleService.sampleBehaviourSubject$ | async}}</p>
 
+<button (click)="sampleService.setSubject('balaji')">b1</button>
+
+<button (click)="sampleService.setSubject('b2')">b2</button>
+<button (click)="sampleService.setSubject('b3')">b3</button>
