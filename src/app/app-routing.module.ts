@@ -6,29 +6,31 @@ import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-f
 import { LoginComponent } from './login/login.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BalajidemoComponent } from './balajidemo/balajidemo.component';
+import { CanActivateInsuranceGuard } from 'src/shared/guards/can-activate-insurance.guard';
 
+// export const CanActivateInsuranceGuard;
 
 export const routes: Routes = [
-  { 
-    path:'signup', component: SignupComponent
-  },
-  { 
-    path:'reactive-forms', component: ReactiveFormsComponent
-  },  { 
-    path:'reactive-forms-builder', component: ReactiveFormBuilderComponent
-  },  { 
-    path:'login', component: LoginComponent
-  },  { 
-    path:'autocomplete', component: AutocompleteComponent
-  },
-  { 
-    path:'balajidemo', component: BalajidemoComponent
+  {
+    path: 'signup', component: SignupComponent, canActivate: [CanActivateInsuranceGuard]
   },
   {
-    path:'insurance', loadChildren: () => import(`./Insurance/insurance-routing.module`).then(m => m.InsuranceRoutingModule)
+    path: 'reactive-forms', component: ReactiveFormsComponent
+  }, {
+    path: 'reactive-forms-builder', component: ReactiveFormBuilderComponent
+  }, {
+    path: 'login', component: LoginComponent
+  }, {
+    path: 'autocomplete', component: AutocompleteComponent
   },
   {
-    path:'loan', loadChildren: () => import(`./loan/loan-routing.module`).then(m => m.LoanRoutingModule)
+    path: 'balajidemo', component: BalajidemoComponent
+  },
+  {
+    path: 'insurance', loadChildren: () => import(`./Insurance/insurance-routing.module`).then(m => m.InsuranceRoutingModule)
+  },
+  {
+    path: 'loan', loadChildren: () => import(`./loan/loan-routing.module`).then(m => m.LoanRoutingModule)
   }
 ]
 

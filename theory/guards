@@ -1,0 +1,7 @@
+Guard: triggers when a change in route happens
+
+canactivate - checks if a user has access to route
+canDeactivate - checks if a user has access to navigate out of route
+canActivateChild  - it checks whether the partial view has access to CanLoad
+Resolve - prefetches API data, 
+CanLoad - this checks if the user has access to load module --- happens at module level

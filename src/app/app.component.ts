@@ -10,7 +10,6 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [SampleService]
 })
 export class AppComponent implements OnInit, OnChanges, DoCheck, 
 AfterContentChecked,AfterContentInit, AfterViewChecked,AfterViewInit,

@@ -7,7 +7,6 @@ import { ReplaySubject } from 'rxjs';
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
-  providers: [SampleService]
 })
 export class SignupComponent implements OnInit {
 

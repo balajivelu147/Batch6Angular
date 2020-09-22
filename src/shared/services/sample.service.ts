@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subject, BehaviorSubject, ReplaySubject, AsyncSubject } from 'rxjs';
 
 @Injectable(
-  //   {
-  //   providedIn: 'root'
-  // }
+    {
+    providedIn: 'root'
+  }
 )
 export class SampleService {
 
