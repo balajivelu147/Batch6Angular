@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { BalajidemoComponent } from './balajidemo/balajidemo.component';
 import { CanActivateInsuranceGuard } from 'src/shared/guards/can-activate-insurance.guard';
+import { CanDeactivateInsuranceGuard } from 'src/shared/guards/can-deactivate-insurance.guard';
+import { CanLoadInsuranceGuard } from 'src/shared/guards/can-load-insurance.guard';
 
 // export const CanActivateInsuranceGuard;
 
@@ -27,10 +29,13 @@ export const routes: Routes = [
     path: 'balajidemo', component: BalajidemoComponent
   },
   {
-    path: 'insurance', loadChildren: () => import(`./Insurance/insurance-routing.module`).then(m => m.InsuranceRoutingModule)
+    path: 'insurance',
+    loadChildren: () => import(`./Insurance/insurance-routing.module`).then(m => m.InsuranceRoutingModule)   
   },
   {
-    path: 'loan', loadChildren: () => import(`./loan/loan-routing.module`).then(m => m.LoanRoutingModule)
+    path: 'loan',
+    loadChildren: () => import(`./loan/loan-routing.module`).then(m => m.LoanRoutingModule),
+    canLoad: [CanLoadInsuranceGuard]
   }
 ]
 

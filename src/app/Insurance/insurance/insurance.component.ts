@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-insurance',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsuranceComponent implements OnInit {
 
-  constructor() { }
+  isAllowedToNavigate: boolean = false;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.data[0].chart);
   }
+
+
 
 }
