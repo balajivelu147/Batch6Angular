@@ -29,6 +29,7 @@ import { ClaimInsuranceComponent } from './Insurance/claim-insurance/claim-insur
 import { InsuranceComponent } from './Insurance/insurance/insurance.component';
 import { LoanModule } from './loan/loan.module';
 import { InsuranceModule } from './Insurance/insurance.module';
+import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
 
 
 
@@ -42,7 +43,8 @@ import { InsuranceModule } from './Insurance/insurance.module';
     ReactiveFormsComponent,
     ReactiveFormBuilderComponent,
     LeftNavComponent,
-    OverlayComponent
+    OverlayComponent,
+    FirstLetterPipe
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,6 @@ import { InsuranceModule } from './Insurance/insurance.module';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    
   MatToolbarModule,
     BrowserAnimationsModule,
     LoanModule,
