@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { map, tap } from 'rxjs/operators';
+ import { UserTaskService } from 'src/shared/services/user-task.service';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -9,9 +10,11 @@ import { map, tap } from 'rxjs/operators';
 })
 export class ReactiveFormsComponent implements OnInit {
   loginForm: FormGroup;
-  constructor() { }
+  constructor(private userTaskService: UserTaskService) { }
 
   ngOnInit(): void {
+this.userTaskService.getUserInfo$().subscribe();
+this.userTaskService.taskListInfo$().subscribe();
     this.loginForm = new FormGroup(
       {
         userName: new FormControl('balaji',

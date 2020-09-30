@@ -15,10 +15,10 @@ import { BalajidemoComponent } from './balajidemo/balajidemo.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormBuilderComponent } from './reactive-form-builder/reactive-form-builder.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { SampleService } from 'src/shared/services/sample.service';
 import { OverlayComponent } from './overlay/overlay.component';
 import { ApplyLoanComponent } from './loan/apply-loan/apply-loan.component';
@@ -30,6 +30,9 @@ import { InsuranceComponent } from './Insurance/insurance/insurance.component';
 import { LoanModule } from './loan/loan.module';
 import { InsuranceModule } from './Insurance/insurance.module';
 import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
+import { HighlightDirective } from 'src/shared/directives/highlight.directive';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeadersInterceptor } from 'src/shared/interceptor/headers.interceptor';
 
 
 
@@ -44,7 +47,8 @@ import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
     ReactiveFormBuilderComponent,
     LeftNavComponent,
     OverlayComponent,
-    FirstLetterPipe
+    FirstLetterPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
@@ -52,19 +56,21 @@ import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
     MatButtonModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    FormsModule ,
-    MatInputModule, 
+    FormsModule,
+    MatInputModule,
     MatAutocompleteModule,
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-  MatToolbarModule,
+    MatToolbarModule,
     BrowserAnimationsModule,
     LoanModule,
     InsuranceModule
-    
+
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

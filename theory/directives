@@ -1,0 +1,5 @@
+directives: this will be assigned to an tag, for which we need to change the behaviour
+
+structural directive: it start with astrick * -->*ngFor, *ngIf, *ngSwitch
+attribute
+custom - if we need new feature to be added to an tag
