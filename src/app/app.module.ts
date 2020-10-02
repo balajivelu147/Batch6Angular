@@ -33,6 +33,13 @@ import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
 import { HighlightDirective } from 'src/shared/directives/highlight.directive';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeadersInterceptor } from 'src/shared/interceptor/headers.interceptor';
+import { TaskComponent } from './task/task.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatTableModule } from '@angular/material/table';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatSortModule } from '@angular/material/sort/sort-module';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -48,7 +55,8 @@ import { HeadersInterceptor } from 'src/shared/interceptor/headers.interceptor';
     LeftNavComponent,
     OverlayComponent,
     FirstLetterPipe,
-    HighlightDirective
+    HighlightDirective,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +73,11 @@ import { HeadersInterceptor } from 'src/shared/interceptor/headers.interceptor';
     MatToolbarModule,
     BrowserAnimationsModule,
     LoanModule,
-    InsuranceModule
+    InsuranceModule,
+    MatPaginatorModule,
+    MatTableModule , 
+    // MatSortModule,
+    MatTooltipModule
 
   ],
   providers: [{

@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { task, taskResult } from '../model/task.model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,20 +35,32 @@ export class UserTaskService {
     body.append('priority', '2');
     body.append('assigned_to', '1');
 
-    return this.httpclient.post<any>(`${this.createTaskApi}`, body, { headers: { 'AuthToken': 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88' } });
+    return this.httpclient.post<any>(`${this.createTaskApi}`, body);
   }
 
   //post method
-  deleteTask$() {
+  deleteTask$(taskId) {
     let body = new FormData();
-    body.append('taskid', '63');
-    return this.httpclient.get<any>(`${this.deleteTaskApi}`);
+    body.append('taskid', taskId);
+    return this.httpclient.post<any>(`${this.deleteTaskApi}`, body );
   }
 
   //get method
-  taskListInfo$() {
+  taskListInfo$(): Observable<taskResult> {
     return this.httpclient.get<any>(this.taskListApi);
   }
+
+  updateTask$(task: task) {
+    let body = new FormData();
+    body.append('message', task.message);
+    body.append('due_date',  task.due_date);
+    body.append('priority',  task.priority);
+    body.append('assigned_to',  task.assigned_name);
+    body.append('taskid',  task.id); 
+
+    return this.httpclient.post<any>(`${this.updateTaskApi}`,body);
+  }
+
 
 
 }

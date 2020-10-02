@@ -9,6 +9,7 @@ import { BalajidemoComponent } from './balajidemo/balajidemo.component';
 import { CanActivateInsuranceGuard } from 'src/shared/guards/can-activate-insurance.guard';
 import { CanDeactivateInsuranceGuard } from 'src/shared/guards/can-deactivate-insurance.guard';
 import { CanLoadInsuranceGuard } from 'src/shared/guards/can-load-insurance.guard';
+import { TaskComponent } from './task/task.component';
 
 // export const CanActivateInsuranceGuard;
 
@@ -27,6 +28,9 @@ export const routes: Routes = [
   },
   {
     path: 'balajidemo', component: BalajidemoComponent
+  },
+  {
+    path: 'task', component: TaskComponent
   },
   {
     path: 'insurance',
